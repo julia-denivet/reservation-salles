@@ -1,0 +1,494 @@
+@font-face {
+  font-family: "Arcade Classic";
+  src: url("font/ARCADECLASSIC.ttf") format("truetype");
+  font-family: "Retro";
+  src: url("font/Retro Gaming.ttf") format("truetype");
+  
+}
+
+
+
+/*HEADER*/
+
+
+ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    text-shadow:: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+.aheader {
+	text-decoration: none;
+	color: white;
+	font-family: "Retro";
+    font-size: 20px;
+    text-shadow: black 0.1em 0.1em 0.2em
+	
+}
+
+a:hover {
+	color: #00FFFB;
+}
+
+
+
+
+
+/*ACCEUIL*/
+.bodyindex
+{
+
+    justify-content: center;
+    align-items: center;
+    font-variant: small-caps;
+    background-image: url(images/index.jpg);
+    background-attachment: fixed;
+	  text-align: center;
+}
+
+@keyframes tipsy {
+    0 {
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+ 
+
+  .aindex {
+    color: #fffbf1;
+    text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+    font-family: "Retro";
+    font-size: 80px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -3px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .aindex:before,
+  .aindex:after {
+    content: '';
+    padding: .9em .4em;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    top: 50%;
+    display: block;
+    border: 15px solid red;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 10s infinite alternate ease-in-out tipsy;
+  }
+  
+  .aindex:before {
+    border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .aindex:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+    box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+  }
+
+.h1index
+{
+    color: white;
+
+}
+
+/*Inscription*/
+
+.bodyinscription
+{
+    
+    margin: 0;
+    height: 100vh;
+    background-image:url(images/inscription.jpg) ;
+    background-attachment: fixed;
+    font-family: 'Retro';
+    font-variant: small-caps;
+    
+
+}
+
+
+.title{
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 42px;
+  color: white;
+  -o-animation: fadein 15s; /* Opera */
+  animation-duration: 3s;
+  animation-name: slidein;
+
+  
+
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+#title-Tag-Line{
+    font-size: 20px;
+}
+
+.form {
+    background:rgba(255, 255, 255, 0.7);;
+    text-align: center; 
+    box-shadow: 0px 0px 20px 5px #AAA; 
+    border-radius: 10px;  
+    width: 900px ; 
+    height: 400px;
+    margin: 30px auto 0 auto;
+    padding: 200px 10px;  
+    animation: bounce 1.5s infinite;
+    font-family: 'Retro';
+    font-variant: small-caps;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+}
+
+.login { 
+  background-image: linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  border-bottom: 5px solid linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  color: white;
+  width:600px;
+  height:60px;
+  font-family: 'Retro';
+  font-variant: small-caps;
+  font-size: 30px;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+    font-size: 20px;
+}
+.login:hover{
+  background-image : linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  border-bottom: 5px solid linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  height:30px;
+  width:400px;
+}
+
+.password {
+  background-image: linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);  
+  border-bottom: 5px solid  linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  height:60px;
+  width:600px;
+  font-family: 'Retro';
+  font-variant: small-caps;
+  font-size: 30px;
+  color: white;
+  
+}
+.password:hover{
+  background-image: linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);  
+  border-bottom: 5px solid linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  height:30px;
+  width:380px;
+ 
+}
+
+
+
+
+.submit{
+  border-radius:5px;
+  padding:10px;
+  background-color: #2DD7BB;  
+  border: none;
+  border-bottom: 5px solid #CB64B2; 
+  transform: translateY(-120px);
+  padding-bottom: 10px;
+  font-family: 'Retro';
+  font-variant: small-caps;
+  font-size: 30px;
+
+}
+
+.submit:hover{
+  border-bottom: 5px solid  linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+}
+
+.entry{
+  display: block;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0px 0px 25px 2px #AAA;  
+}
+
+/* Shadow to make it look like form is floating  */
+.shadow{
+  box-shadow: 0px 0px 60px 5px #AAA;
+  opacity: 0.5;
+  border-radius: 100px;
+  width: 50%; 
+  margin: 50px auto 0 auto;
+  padding: 0 20px;  
+  animation: shadow 1.5s infinite;
+}
+.submit{
+  border-radius:5px;
+  padding:10px;
+  width:150px;
+  color: white;
+  background-image: linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  border: none;
+  border-bottom: 5px solid  linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
+  margin-top: 100px; 
+
+}
+
+
+
+@keyframes bounce{
+  0%{
+    
+  }
+  50%{
+    transform: translate(0, 8px);
+  }
+
+}
+@keyframes shadow{
+  0%{
+    
+  }
+  50%{
+    opacity: 0.8;
+    width: 50%;
+  }
+}
+
+.shadowconnexion
+{
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+.labelinscription:hover
+{
+  -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+/*Connexion*/
+
+.bodyconnexion
+{
+  background-image: url(images/connexion.jpg);
+  background-attachment: fixed;
+ 
+}
+
+
+.formconnexion
+{
+    background: black;
+    text-align: center; 
+    box-shadow: 0px 0px 20px 5px #AAA; 
+    border-radius: 10px;  
+    width: 400px ; 
+    height: 200px;
+    margin: 30px auto 0 auto;
+    animation: bounce 1.5s infinite;
+    font-family: 'Retro';
+    font-variant: small-caps;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+    color: white;
+
+}
+
+.sectionco
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
+
+.inputco
+{
+  background-color: white;
+  font-family: 'Retro';
+  font-variant: small-caps;
+}
+
+text-effect {
+  overflow: hidden;
+  position: relative;
+  filter: contrast(110%) brightness(190%);
+}
+
+.neon {
+  position: relative;
+  
+  &::before,
+  &::after {
+    content: attr(data-text);
+    color: white;
+    filter: blur(0.02em);
+    position: absolute;
+    top: 0; left: 0;
+    pointer-events: none;
+  }
+  
+
+  &::after {
+    mix-blend-mode: difference;
+  }
+}
+
+
+.gradient,
+.spotlight {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  pointer-events: none;
+  z-index: 10;  
+}
+
+
+
+@keyframes light {
+  100% {
+    transform: translate3d(50%, 50%, 0);
+  }
+}
+
+.Validerco
+{
+    width: 180px;
+    height: 40px;
+    background: #222;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 20px;
+    font-family: 'Retro';
+    font-variant: small-caps;
+    
+
+}
+
+.box {
+  width: 180px;
+  height: 60px;
+  padding: 12px;
+  border: 3px solid #fff;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.box span {
+  position: absolute;
+  background: none;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+}
+
+.box span.left, .box span.right {
+  height: 50%;
+  width: 2px;
+}
+
+.box span.top, .box span.bottom {
+  width: 50%;
+  height: 2px;
+}
+
+.box span.left {
+  left: -2px;
+  bottom: -140%;
+}
+
+.box:hover span.left {
+  background: #fff;
+  bottom: 0;
+}
+
+.box span.right {
+  right: -2px;
+  top: -140%;
+}
+
+.box:hover span.right {
+  background: #fff;
+  top: 0;
+}
+
+.box span.top {
+  top: -2px;
+  left: -140%;
+}
+
+.box:hover span.top {
+  background: #fff;
+  left: 0;
+}
+
+.box span.bottom {
+  bottom: -2px;
+  right: -140%;
+}
+
+.box:hover span.bottom {
+  background: #fff;
+  right: 0;
+}
+
+/*Profil*/
+
+.bodyprofil
+{
+  background-image: url(images/profil.jpg);
+  background-attachment: fixed;
+}
+
+.alertconnexion
+
+{
+  text-align: center;
+  color : white;
+  font-family: "Retro";
+
+}
+
+.alertconnexion:hover
+{
+  -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}

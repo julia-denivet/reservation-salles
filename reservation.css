@@ -1,0 +1,104 @@
+@font-face {
+	font-family: "Arcade Classic";
+  src: url("font/ARCADECLASSIC.ttf") format("truetype");
+  font-family: "Retro";
+  src: url("font/Retro Gaming.ttf") format("truetype");
+}
+
+
+
+/*HEADER*/
+
+
+ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    text-shadow:: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+.aheader {
+	text-decoration: none;
+	color: white;
+	font-family: "Arcade Classic";
+    font-size: 20px;
+    text-shadow: black 0.1em 0.1em 0.2em
+	
+}
+
+a:hover {
+	color: #00FFFB;
+}
+
+
+
+
+
+/*ACCEUIL*/
+.bodyindex
+{
+
+    justify-content: center;
+    align-items: center;
+    font-family: "Retro";
+    font-variant: small-caps;
+    background-image: url(images/index.jpg);
+    background-attachment: fixed;
+	  text-align: center;
+}
+
+@keyframes tipsy {
+    0 {
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+ 
+
+  .aindex {
+    color: #fffbf1;
+    text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+    font-family: "Retro";
+    font-size: 80px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -3px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .aindex:before,
+  .aindex:after {
+    content: '';
+    padding: .9em .4em;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    top: 50%;
+    display: block;
+    border: 15px solid red;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 10s infinite alternate ease-in-out tipsy;
+  }
+  
+  .aindex:before {
+    border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .aindex:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+    box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+  }
+
+.h1index
+{
+    color: white;
+
+}
