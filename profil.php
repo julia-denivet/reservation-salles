@@ -46,19 +46,23 @@ if (isset($_SESSION['login']))
                 </ul>
             </nav>
         </header>
-        <form method="post">
+        <section class='sectionprofil'>
+            <form class='formprofil' method="post">
+            <h1>Profil</h1>
                         
             <label>Login</label>
-            <input type="text" name="login" placeholder="login" value="<?php echo $data['login']; ?>"  required>
+            <input class='inputprofil' type="text" name="login" placeholder="login" value="<?php echo $data['login']; ?>"  required>
             <br/>
 
             <label>Password</label>
-            <input type="password" name="password" placeholder="password" required>
+            <input class='inputprofil' type="password" name="password" placeholder="password" required>
             <br/>
 
-            <input name="submit" type="submit" value="Valider">
+            <input class='inputprofil' id='Validerprofil' name="submit" type="submit" value="Valider">
                                         
         </form>
+        </section>
+        
         <?php
                 
 

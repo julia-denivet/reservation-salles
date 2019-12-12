@@ -1,9 +1,6 @@
 @font-face {
-  font-family: "Arcade Classic";
-  src: url("font/ARCADECLASSIC.ttf") format("truetype");
-  font-family: "Retro";
-  src: url("font/Retro Gaming.ttf") format("truetype");
-  
+  font-family: 'Retro Gaming';
+  src : url("font/Retro Gaming.ttf") format("truetype");
 }
 
 
@@ -15,14 +12,16 @@ ul {
 	list-style-type: none;
 	display: flex;
 	flex-direction: row;
-    justify-content: space-around;
-    text-shadow:: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  justify-content: space-around;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+  font-family: 'Retro Gaming';
+
 }
 
 .aheader {
-	text-decoration: none;
-	color: white;
-	font-family: "Retro";
+	  text-decoration: none;
+	  color: white;
+    font-family: 'Retro Gaming';
     font-size: 20px;
     text-shadow: black 0.1em 0.1em 0.2em
 	
@@ -45,7 +44,9 @@ a:hover {
     font-variant: small-caps;
     background-image: url(images/index.jpg);
     background-attachment: fixed;
-	  text-align: center;
+    text-align: center;
+    font-family: 'Retro Gaming';
+    
 }
 
 @keyframes tipsy {
@@ -61,7 +62,7 @@ a:hover {
   .aindex {
     color: #fffbf1;
     text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
-    font-family: "Retro";
+    font-family: 'Retro Gaming';
     font-size: 80px;
     font-weight: bold;
     text-decoration: none;
@@ -112,7 +113,7 @@ a:hover {
     height: 100vh;
     background-image:url(images/inscription.jpg) ;
     background-attachment: fixed;
-    font-family: 'Retro';
+    font-family: 'Retro Gaming';
     font-variant: small-caps;
     
 
@@ -160,7 +161,6 @@ a:hover {
     margin: 30px auto 0 auto;
     padding: 200px 10px;  
     animation: bounce 1.5s infinite;
-    font-family: 'Retro';
     font-variant: small-caps;
     display: flex;
     flex-direction: column;
@@ -175,7 +175,7 @@ a:hover {
   color: white;
   width:600px;
   height:60px;
-  font-family: 'Retro';
+  font-family: 'Retro Gaming';
   font-variant: small-caps;
   font-size: 30px;
 }
@@ -196,7 +196,7 @@ a:hover {
   border-bottom: 5px solid  linear-gradient(to right top, #cd1400, #c61301, #be1201, #b71102, #b01002, #ab0f02, #a60f02, #a10e02, #9c0d02, #970c02, #930c01, #8e0b01);
   height:60px;
   width:600px;
-  font-family: 'Retro';
+  font-family: 'Retro Gaming';
   font-variant: small-caps;
   font-size: 30px;
   color: white;
@@ -221,7 +221,7 @@ a:hover {
   border-bottom: 5px solid #CB64B2; 
   transform: translateY(-120px);
   padding-bottom: 10px;
-  font-family: 'Retro';
+  font-family: 'Retro Gaming';
   font-variant: small-caps;
   font-size: 30px;
 
@@ -301,6 +301,7 @@ a:hover {
 {
   background-image: url(images/connexion.jpg);
   background-attachment: fixed;
+  font-family: 'Retro Gaming';
  
 }
 
@@ -315,7 +316,6 @@ a:hover {
     height: 200px;
     margin: 30px auto 0 auto;
     animation: bounce 1.5s infinite;
-    font-family: 'Retro';
     font-variant: small-caps;
     display: flex;
     flex-direction: column;
@@ -338,7 +338,7 @@ a:hover {
 .inputco
 {
   background-color: white;
-  font-family: 'Retro';
+  font-family: 'Retro Gaming';
   font-variant: small-caps;
 }
 
@@ -392,7 +392,7 @@ text-effect {
     font-size: 22px;
     color: #fff;
     border-radius: 20px;
-    font-family: 'Retro';
+    font-family: 'Retro Gaming';
     font-variant: small-caps;
     
 
@@ -476,6 +476,8 @@ text-effect {
 {
   background-image: url(images/profil.jpg);
   background-attachment: fixed;
+  font-family: 'Retro Gaming';
+  font-variant: small-caps;
 }
 
 .alertconnexion
@@ -483,7 +485,7 @@ text-effect {
 {
   text-align: center;
   color : white;
-  font-family: "Retro";
+  font-family: 'Retro Gaming';
 
 }
 
@@ -491,4 +493,59 @@ text-effect {
 {
   -webkit-transform: rotate(-15deg);
     transform: rotate(-15deg);
+}
+
+.formprofil 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+    border: solid black 5px;
+    border-radius: 20px;
+    width: 300px;
+    background:rgba(255, 255, 255, 0.7);;
+    text-align: center; 
+    box-shadow: 0px 0px 20px 5px #AAA; 
+    border-radius: 10px;  
+    width: 300px ; 
+    height: 10%;
+    margin: 30px auto 0 auto;
+    padding: 200px 10px;  
+    animation: bounce 1.5s infinite;
+    
+
+  
+}
+
+.sectionprofil
+
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  font-family: 'Retro Gaming';
+}
+
+.inputprofil
+{
+  border-radius: 20px;
+  font-family: 'Retro Gaming';
+  
+}
+
+@font-face
+{
+  font-family: 'King';
+  src: url("font/The King of Fighters Font.ttf") format("truetype");
+}
+
+#Validerprofil
+{
+  font-family: 'King';
+  font-size : 30px;
+  
 }
