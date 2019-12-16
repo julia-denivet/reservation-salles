@@ -10,7 +10,7 @@ session_start();
     <link rel='stylesheet' type='text/css' media='screen' href='reservation1.css'>
     
 </head>
-<body>
+<body id="bodyplanning">
 <header>
         <nav>
 			<ul>
@@ -37,8 +37,8 @@ session_start();
 			</ul>
 		</nav>
 </header>
-<main>
-<table>
+<main id="mainplanning">
+<table class="steelBlueCols">
     <thead>
         <tr>
             <th></th>
@@ -57,12 +57,12 @@ session_start();
 
 		for($l = 8; $l < 19; ++$l)
 			{
-			    echo '<tr class="ligne">';
-                echo '<td class="heure">', $l, '</td>';
+			    echo '<tr>';
+                echo '<td>', $l, '</td>';
                 
-					for($i = 0; $i <= 6; ++$i)
+					for($i = 0; $i <= 5; ++$i)
 						{
-							echo '<td class="evenement">';
+							echo '<td>';
 							$d = 0;
 
 							foreach($resultat as $donnees)
@@ -76,7 +76,7 @@ session_start();
 									if($joursem == $i && $heure == $l)
 									    {
 											$id = $donnees['id'];
-											echo "<a href='reservation.php?id=", $id, "'><div class='event_color'>";
+											echo "<a href='reservation.php?id=", $id, "'><div>";
 											echo $donnees['login'], '<br/>';
 											echo $donnees['titre'];
 											echo '</div></a>';

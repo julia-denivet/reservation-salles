@@ -10,7 +10,7 @@ session_start();
     <link rel='stylesheet' type='text/css' media='screen' href='reservation1.css'>
     
 </head>
-<body>
+<body id="bodyreservationform">
 <header>
         <nav>
 			<ul>
@@ -38,21 +38,21 @@ session_start();
 		</nav>
 </header>
 <main>
-                <form action="reservation-form.php" method="post" class="">
+                <form action="reservation-form.php" method="post" class="form">
                 <label>Titre :</label>
-                <input type="text" name="titre" required><br>
+                <input class="inputco" type="text" name="titre" required><br>
                 <label>Description :</label>
-                <input type="text" name="desc" required><br>
+                <input class="inputco" type="text" name="desc" required><br>
                 <label>Horaire début :</label>
-                <input type="date" name="datedeb" required>
-                <input type="time" name="timedeb" value="08:00" step="3600" min="08:00" max="18:00" required><br>
+                <input class="inputco" type="date" name="datedeb" required>
+                <input class="inputco" type="time" name="timedeb" value="08:00" step="3600" min="08:00" max="18:00" required><br>
                 <label>Horaire fin :</label>
-                <input type="date" name="datefin" required>
-                <input type="time" name="timefin" value="09:00" step="3600" min="09:00" max="19:00" required><br>
-                <input type="submit" value="Réserver" name="valider">
+                <input class="inputco" type="date" name="datefin" required>
+                <input class="inputco" type="time" name="timefin" value="09:00" step="3600" min="09:00" max="19:00" required><br>
+                <input class="inputco Validerco" type="submit" value="Réserver" name="valider">
                 </form>
                 <?php
-                    $connect = mysqli_connect('localhost','root','', 'reservationsalles')
+                    $connect = mysqli_connect('localhost','root','', 'reservationsalles');
                     if(isset($_POST["valider"]))
                     {
                         $titre = $_POST["titre"];
@@ -69,7 +69,7 @@ session_start();
                         }
                         else
                         {
-                            $reqins = "INSERT INTO reservation (titre, description, debut, fin, id_utilisateur) VALUES ('$titre', '$desc', '$deb', '$fin', '$id')";
+                            $reqins = "INSERT INTO reservations (titre, description, debut, fin, id_utilisateur) VALUES ('$titre', '$desc', '$deb', '$fin', '$id')";
                             $queryins = mysqli_query($connect, $reqins);
                         }
                     }
