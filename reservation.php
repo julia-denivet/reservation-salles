@@ -1,16 +1,19 @@
 <?php
 session_start();
+if(!isset($_SESSION["login"]))
+{
+    header('location:index.php');
+}
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>Page Title</title>
+    <title>Planning</title>
     <link rel='stylesheet' type='text/css' media='screen' href='reservation1.css'>
     
 </head>
-<body class="bodyindex">
+<body id="bodyreservation">
 <header>
         <nav>
 			<ul>
@@ -37,11 +40,24 @@ session_start();
 			</ul>
 		</nav>
 </header>
+<main>
+    <?php
+    $connect = mysqli_connect('localhost','root','', 'reservationsalles');
+    $request = "SELECT * FROM reservations WHERE id = '".$_GET['id']."'";
+    $query = mysqli_query($connect, $request);
+    $result = mysqli_fetch_assoc($query);
 
-    <h1  class="aindex" target="_blank">Bienvenue  sur  arcadelife,  ici  tu  peux  reserver  ta  salle  pour  jouer  a  des  jeux  rétros  ! </h1>
- 
-<footer>
-
-</footer>
+    $requestuser = "SELECT login FROM utilisateurs WHERE id = '".$result['id_utilisateur']."'";
+    $queryuser = mysqli_query($connect, $requestuser);
+    $resultuser = mysqli_fetch_assoc($queryuser);
+    ?>
+    <div id="reservationdiv">
+    <div class="reservationecho"><?php echo $result['titre']; ?></div>
+	<div class="reservationecho">Réserver par : <?php echo $resultuser['login']; ?></div>
+	<div class="reservationecho">Du : <?php echo $result['debut']; ?></div>
+	<div class="reservationecho">Au : <?php echo $result['fin']; ?></div>
+    <div class="reservationecho">Description : <br/><?php echo $result['description']; ?></div>
+    </div>
+</main>
 </body>
 </html>
