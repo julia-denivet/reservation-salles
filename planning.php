@@ -51,7 +51,7 @@ session_start();
     </thead>
     <tbody>
     <?php
-		$connexion = mysqli_connect("localhost", "root", "", "reservationsalles");
+		$connexion = mysqli_connect('Localhost', 'AdminResa', 'Lamballe43', 'gwenael-mahe_reservation');
 		$requete = "SELECT * FROM utilisateurs INNER JOIN reservations ON utilisateurs.id = reservations.id_utilisateur WHERE WEEK(reservations.debut) = WEEK(CURDATE())";
 		$resultat = mysqli_query($connexion, $requete);
 

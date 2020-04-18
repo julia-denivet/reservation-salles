@@ -68,7 +68,7 @@ session_start();
                 
                 if ($login && $password)
                     {
-                        $connect = mysqli_connect('localhost','root','', 'reservationsalles') or die ('Error');
+                        $connect = mysqli_connect('Localhost', 'AdminResa', 'Lamballe43', 'gwenael-mahe_reservation') or die ('Error');
                         $query = "SELECT*FROM utilisateurs WHERE login = '".$login."'";
                         $reg = mysqli_query ($connect,$query);
                         /*permet de lire/retourner une ligne du tableau, la première par défaut*/

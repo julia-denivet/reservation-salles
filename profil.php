@@ -3,7 +3,7 @@
 session_start();
 
 
-$connexion = mysqli_connect("localhost","root", "","reservationsalles");
+$connexion = mysqli_connect('Localhost', 'AdminResa', 'Lamballe43', 'gwenael-mahe_reservation');
 $requete= "SELECT * FROM utilisateurs WHERE login='".$_SESSION['login']."'";
 $query= mysqli_query($connexion, $requete);
 $data = mysqli_fetch_assoc($query);

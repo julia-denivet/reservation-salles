@@ -42,7 +42,7 @@ if(!isset($_SESSION["login"]))
 </header>
 <main>
     <?php
-    $connect = mysqli_connect('localhost','root','', 'reservationsalles');
+    $connect = mysqli_connect('Localhost', 'AdminResa', 'Lamballe43', 'gwenael-mahe_reservation');
     $request = "SELECT * FROM reservations WHERE id = '".$_GET['id']."'";
     $query = mysqli_query($connect, $request);
     $result = mysqli_fetch_assoc($query);

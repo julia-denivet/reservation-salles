@@ -69,7 +69,7 @@ session_start();
 				if ($_POST['password']== $_POST['confirmpassword'])
 				{
 					
-					$connexion = mysqli_connect('localhost','root','','reservationsalles') or die ('Error');
+					$connexion = mysqli_connect('Localhost', 'AdminResa', 'Lamballe43', 'gwenael-mahe_reservation') or die ('Error');
 					$requete = "SELECT * FROM utilisateurs WHERE login='".$login."'";
 					$query = mysqli_query($connexion, $requete);
 					$rows = mysqli_num_rows($query);

@@ -56,7 +56,7 @@ if(!isset($_SESSION["login"]))
                 <input class="inputco Validerco" type="submit" value="Réserver" name="valider">
                 </form>
                 <?php
-                    $connect = mysqli_connect('localhost','root','', 'reservationsalles');
+                    $connect = mysqli_connect('Localhost', 'AdminResa', 'Lamballe43', 'gwenael-mahe_reservation');
                     if(isset($_POST["valider"]))
                     {
                         $titre = $_POST["titre"];
